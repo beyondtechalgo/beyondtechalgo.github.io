@@ -30,7 +30,7 @@
         <div class="col-md-10 main-title">
 <!--           <h1>Welcome</h1> -->
                 <h2>Website under construction</h2> -->
-                <h3>Contact us at contact@pinecoder.in</h3>
+                <h3>Contact us at contact@pinecoder.in <span class="material-icons" onclick="copyToClipboard('contact@pinecoder.in')">content_copy</span></h3>
 <!--           <h2>Website under construction, pine coder will be out soon!</h2> -->
         </div>
       </div>
@@ -272,5 +272,16 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert('Email copied to clipboard: ' + text);
+      }
+    </script>
   </body>
 </html>
